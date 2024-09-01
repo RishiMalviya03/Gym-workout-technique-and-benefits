@@ -1,0 +1,102 @@
+
+$(function () {
+
+// MENU
+// $('.navbar-collapse a').on('click',function(event){
+//     event.stopPropagation(); // Prevent event propagation
+//   $(".navbar-collapse").collapse('hide');
+// });
+
+// AOS ANIMATION
+AOS.init({
+  disable: 'mobile',
+  duration: 800,
+  anchorPlacement: 'center-bottom'
+});
+
+
+// SMOOTHSCROLL NAVBAR
+$(function() {
+  $('.navbar a, .hero-text a').on('click', function(event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top - 49
+    }, 1000);
+    event.preventDefault();
+  });
+});  
+
+
+});
+
+// document.addEventListener('DOMContentLoaded', function() {
+
+//     let currentImageIndex = 0;
+//     const images = ['assets/images/background/1.jpg', 'assets/images/background/2.jpg', 'assets/images/background/3.jpg']; // Update with your image paths
+//     const heroElement = document.querySelector('.hero');
+
+//     function changeBackground() {
+//         currentImageIndex = (currentImageIndex + 1) % images.length; // Loop through images
+//         heroElement.style.backgroundImage = `url(${images[currentImageIndex]})`;
+//     }
+
+//     setInterval(changeBackground, 5000); // Change every 5 seconds
+
+// });
+
+$(document).ready(function() {
+
+    // Videos Modal
+
+    const $modal = $('#videos');
+    const $videoPlayer = $('#videoPlayer');
+
+    $modal.on('show.bs.modal', function(event) {
+        
+        const button = $(event.relatedTarget); 
+        const videoName = button.data('name'); 
+
+        $('#videoLabel').text(videoName);
+
+        const videoSrc = `assets/images/testimonials/${videoName}.mp4`; 
+
+        // Set the source of the video element
+        $videoPlayer.attr('src', videoSrc);
+
+        // Play the video when enough data is buffered
+        $videoPlayer.on('canplay', function() {
+            $videoPlayer.get(0).play(); 
+        });
+    });
+
+    // Pause the video when modal is hidden
+    $modal.on('hide.bs.modal', function() {
+        $videoPlayer.get(0).pause(); 
+    });
+
+
+    // Image Modal
+
+    const $imageModal = $('#images');
+    const $imageModalBody = $imageModal.find('.modal-body');
+    const $imageModalTitle = $imageModal.find('.modal-title');
+
+    // Handle click event on images
+    $('.modal-img').click(function() {
+        const imageUrl = $(this).attr('src');
+        const imageTitle = $(this).data('title');
+
+        // Set image and title in modal
+        $imageModalBody.html(`<img src="${imageUrl}" class="img-fluid" style="width:100%">`);
+        $imageModalTitle.text(imageTitle);
+
+        // Show the modal
+        $imageModal.modal('show');
+    });
+
+    // Close modal when close button is clicked
+    $('.close').click(function() {
+        $imageModal.modal('hide');
+    });
+
+});

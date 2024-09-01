@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Studio Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/Screenshot 2024-08-30 143439.png" alt="RM Fitness Logo">
+            <span>RM FITNESS STUDIO</span>
+            <span class="badge">24/7</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">More</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search exercises...">
+            <button id="search-button">Search</button>
+            <ul id="search-results" class="search-results"></ul>
+        </div>
+        <div class="cta-buttons">
+            <div class="join-now">
+                <a href="#">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="content-section">
+        <div class="bicep-block">
+            <img src="images/biceps.jpeg" alt="Bicep Exercise">
+            <div class="content">
+                <h2>Bicep Curl</h2>
+                <p>The bicep curl is a fundamental exercise for building bicep strength. Hold a dumbbell in each hand with palms facing forward.</p>
+                <h3>Technique</h3>
+                <p> Keep your upper arms stationary and curl the weights while exhaling. Lift the dumbbells until your biceps are fully contracted. Slowly lower them back to the starting position.</p>
+                <h3>Benefits:</h3>
+                <p>This exercise effectively isolates the biceps, promoting muscle growth and improving arm strength.</p>
+            </div>
+        </div>
+
+        <div class="wrist-block">
+            <img src="images/wrist.jpeg" alt="Wrist Curl Exercise">
+            <div class="content">
+                <h2>Wrist Curl</h2>
+                <p>The wrist curl is an essential exercise for strengthening the forearm muscles. Hold a dumbbell in each hand with palms facing upward.</p>
+                <h3>Technique</h3>
+                <p>Rest your forearms on a bench or your thighs, allowing your wrists to hang over the edge. Curl the weights up by flexing your wrists, then slowly lower them back to the starting position.</p>
+                <h3>Benefits:</h3>
+                <p>This exercise isolates the forearm flexors, improving grip strength and enhancing overall wrist stability.</p>
+            </div>
+        </div>
+
+    <button>
+    </section><a href="index3.html" class="next-button raised">Next</a>
+    </button>
+    <button>
+    </section><a href="index2.html" class="previous-button raised">Previous</a>
+    </button>
+    <div class="feedback-block">
+        <h2>Leave Your Feedback</h2>
+        <textarea id="feedback-text" placeholder="Write your feedback here..."></textarea>
+        <button id="submit-feedback">Submit</button>
+        <p id="feedback-message" class="hidden">Thank you for your feedback!</p>
+    </div>
+    
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Developer: Rishi Malviya</p>
+                <p>Email: <a href="mailto:rishi91093@gmail.com">rishi91093@gmail.com</a></p>
+                <p>Phone: <a href="tel:+91974230507">7974230507</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <p><a href="https://www.instagram.com/workout_rishi/">Instagram</a> | <a href="#">Twitter</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>© 2024 Fitness Studio</h4>
+                <p>All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+    // Function to update the "Join Now" count
+    document.getElementById('submit-feedback').addEventListener('click', function() {
+    var feedbackText = document.getElementById('feedback-text').value;
+    
+    if (feedbackText.trim() !== "") {
+        document.getElementById('feedback-message').classList.remove('hidden');
+        document.getElementById('feedback-text').value = ""; // Clear the textarea after submission
+    } else {
+        alert("Please enter your feedback before submitting.");
+    }
+});
+
+        </script>
+</body>
+</html>

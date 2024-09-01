@@ -1,0 +1,457 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.badge {
+    margin-left: 5px;
+    font-size: 0.8em;
+    color: #007BFF;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #FF007F; /* Pink color for active and hover state */
+}
+
+.cta-buttons {
+    display: flex;
+    align-items: center;
+}
+/* Add to your style.css */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+#search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#search-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #FF007F;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#search-button:hover {
+    background-color: #FF007F;
+}
+
+.search-results {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #fff;
+    display: none; /* Hidden by default */
+    max-height: 200px;
+    overflow-y: auto;
+    width: 200px;
+}
+
+.search-results li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.search-results li:hover {
+    background-color: #f1f1f1;
+}
+
+.franchise {
+    background-color: #FF007F; /* Pink color */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.franchise:hover {
+    background-color: #e60073; /* Slightly darker pink on hover */
+}
+
+.join-now {
+    display: flex;
+    align-items: center;
+}
+
+.count {
+    color: #fff;
+    background-color: #FF007F; /* Pink color */
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    font-size: 1em;
+}
+
+.join-now a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #FF007F; /* Pink color */
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+.join-now a:hover {
+    background-color: #e60073; /* Slightly darker pink on hover */
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+/* New Content Section */
+.content-section {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.content-block, .lat-pulldown-block, .horizontalPull-block,.deadlift-block,.Tbar-row-block,.single-block,
+.pussup-block,.bench-press-block,.cablefly-block,.dumbblefly-block,.barbellsquats-block,.legpress-block,
+.legextension-block,.hamstring-block,.calf-block,.tricep-block,.triceppull-block,.hammercurl-block ,
+.bicep-block,.reverse-block,.wrist-block{
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General styling for images and content */
+.content-block img,.lat-pulldown-block img, .horizontalPull-block img,.deadlift-block img ,.Tbar-row-block img,.single-block img,.pussup-block img,.bench-press-block img,.cablefly-block img ,.dumbblefly-block img ,.barbellsquats-block img ,.legpress-block img,.legextension-block img,
+.hamstring-block img,.calf-block img,.tricep-block img,.triceppull-block img,.hammercurl-block img,
+.bicep-block img ,.reverse-block img,.wrist-block img{
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content-block .content, .lat-pulldown-block .content, .horizontalPull-block .content ,.deadlift-block .content,.Tbar-row-block .content,.single-block .content,.pussup-block .content,.bench-press-block .content,.cablefly-block .content.dumbblefly-block .content ,.barbellsquats-block .content ,.legpress-block .content,.legextension-block .content,
+.hamstring-block .content,.calf-block .content,.tricep-block .content,.triceppull-block .content,
+.hammercurl-block.content,.bicep-block.content ,.reverse-block.content,.wrist-block.content{
+    max-width: 600px;
+}
+
+.content-block h3, .lat-pulldown-block h3, .horizontalPull-block h2 ,.deadlift-block h2,.Tbar-row-block h2,.single-block h2,.pussup-block h2,.bench-press-block h2,.cablefly-block h2.dumbblefly-block h2 ,.barbellsquats-block h2 ,.legpress-block h2,.legextension-block h2,
+.hamstring-block h2,.calf-block h2,.tricep-block h2,.triceppull-block h2,.hammercurl-block h2,
+.bicep-block h2 ,.reverse-block h2,.wrist-block h2{
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.content-block p, .lat-pulldown-block p, .horizontalPull-block p,.deadlift-block p,.Tbar-row-block p,.single-block p,.pussup-block p,.bench-press-block p,.cablefly-block p,.dumbblefly-block p ,.barbellsquats-block p ,.legpress-block p,.legextension-block p,
+.hamstring-block p,.calf-block p,.tricep-block p,.triceppull-block p, .hammercurl-block p,
+.bicep-block p ,.reverse-block p,.wrist-block p{
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Alternate left-right alignment */
+.content-section > div:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.content-section > div:nth-child(even) .content {
+    text-align: left;
+}
+
+.content-section > div:nth-child(odd) {
+    flex-direction: row;
+}
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 1rem;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    margin: 0.5rem 0;
+}
+
+.footer-section a {
+    color: #e63946;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section p a {
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 0.5rem 0;
+    }
+}
+/* Raised 3D Button Style */
+.next-button.raised {
+    padding: 10px 20px;
+    position: relative;
+    left: 1100px;
+    bottom: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    font-size: 16px;
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.next-button.raised:hover {
+    background-color: #218838; /* Darker green on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    transform: translateY(-2px); /* Slightly lift button on hover */
+}
+.previous-button.raised {
+    padding: 10px 20px;
+    position: relative;
+    left: 900px;
+    bottom: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    font-size: 16px;
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.previous-button.raised:hover {
+    background-color: #218838; /* Darker green on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    transform: translateY(-2px); /* Slightly lift button on hover */
+}
+.feedback-block {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Animation for initial fade-in effect */
+}
+
+.feedback-block h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+    animation: slideIn 1s ease-out; /* Animation for sliding in heading */
+}
+
+.feedback-block textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 14px;
+    animation: growIn 0.5s ease-out; /* Animation for textarea appearing */
+}
+
+.feedback-block button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: pulse 1s infinite; /* Pulsing animation for the button */
+}
+
+.feedback-block button:hover {
+    background-color: #218838;
+}
+
+#feedback-message {
+    margin-top: 15px;
+    color: #28a745;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s forwards; /* Animation for message appearing */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes growIn {
+    from {
+        transform: scaleY(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
